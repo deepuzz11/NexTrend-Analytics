@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXTREND ANALYTICS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Welcome to NEXTREND ANALYTICS</h1>
+    <form id="dataForm">
+        <label for="platform">Select Platform:</label>
+        <select id="platform" name="platform">
+            <option value="twitter">Twitter</option>
+            <option value="facebook">Facebook</option>
+        </select>
+        <button type="button" onclick="collectData()">Collect Data</button>
+    </form>
+    <div id="results"></div>
+    <script>
+        function collectData() {
+            const platform = document.getElementById('platform').value;
+            fetch('/collect_data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ platform })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('results').innerText = JSON.stringify(data, null, 2);
+            });
+        }
+    </script>
+</body>
+</html>
