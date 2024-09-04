@@ -40,10 +40,6 @@ The Social Media Analytics Tool is a Python-based web application that provides 
 - **Advanced data visualization tools.**
 - **Real-time analytics and reporting.**
 
-## Contributing
-
-Feel free to contribute to this project by submitting issues or pull requests.
-
 ## License
 
 This project is licensed under the MIT License.
