@@ -37,16 +37,20 @@ The **NexTrend-Analytics** tool is a Python-based web application that provides 
 NexTrend-Analytics/
 │
 ├── app.py                    # The main application file.
-├── models.py                 # Manages database models.
-├── nlp.py                    # Contains functions for sentiment analysis and trend detection.
+├── database.py               # Manages database connections and operations.
+├── LICENSE                   # License information for the project.
+├── README.md                 # Documentation file (this file).
+├── requirements.txt          # List of dependencies required for the project.
 │
-├── templates/                # Contains HTML files for the web interface.
-│   ├── index.html            # Main page for user input.
-│   └── results.html          # Page to display analysis results.
+├── sentiment_analysis.py      # Functions for performing sentiment analysis.
+├── social_media.py           # Functions for interacting with social media APIs.
+├── trend_detection.py         # Functions for detecting trends in social media data.
 │
-└── static/                   # Stores static files such as CSS and JavaScript.
-    ├── styles.css            # Styles for the web application.
-    └── script.js             # JavaScript file for frontend functionality.
+├── static/                   # Stores static files such as CSS and JavaScript.
+│   └── styles.css            # Styles for the web application.
+│
+└── templates/                # Contains HTML files for the web interface.
+    └── index.html            # Main page for user input and interaction.
 ```
 
 ## How to Use
